@@ -1,0 +1,593 @@
+/* Food Container Styles */
+.food-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.food-container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    gap: 12px;
+    color: #2d3748;
+}
+
+/* Error Message */
+.food-container .error-message {
+    background-color: #fed7d7;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Disabled States */
+.search-input.disabled {
+    background-color: #f7fafc;
+    color: #a0aec0;
+    cursor: not-allowed;
+}
+
+.search-button.disabled {
+    background-color: #a0aec0;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.popular-tag.disabled,
+.recent-tag.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Food Search Styles */
+.food-search {
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4299e1;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.search-button {
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #3182ce;
+}
+
+.popular-searches {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.popular-searches span {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.popular-tag {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #4a5568;
+    transition: all 0.2s;
+}
+
+.popular-tag:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+.search-suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.recent-searches {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.recent-searches span {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.recent-tag {
+    background: #e6fffa;
+    border: 1px solid #81e6d9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #2c7a7b;
+    transition: all 0.2s;
+}
+
+.recent-tag:hover {
+    background: #b2f5ea;
+    border-color: #4fd1c7;
+}
+
+/* Food List Styles */
+.food-list {
+    min-height: 400px;
+}
+
+.results-header {
+    margin-bottom: 20px;
+}
+
+.results-header h2 {
+    font-size: 20px;
+    color: #2d3748;
+    margin: 0;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Loading Styles */
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #4a5568;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid #4299e1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Empty State Styles */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #4a5568;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 18px;
+    margin: 0 0 8px 0;
+    color: #2d3748;
+}
+
+.empty-state p {
+    margin: 0;
+    color: #718096;
+}
+
+/* Food Card Styles */
+.food-card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.food-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: #cbd5e0;
+}
+
+.food-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7fafc;
+    font-size: 48px;
+    color: #cbd5e0;
+}
+
+.food-info {
+    padding: 16px;
+}
+
+.food-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.food-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #718096;
+}
+
+.cooking-time, .servings {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.health-score {
+    margin-bottom: 12px;
+}
+
+.score-label {
+    font-size: 12px;
+    color: #4a5568;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.score-bar {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.score-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #38a169);
+    transition: width 0.3s ease;
+}
+
+.score-value {
+    font-size: 11px;
+    color: #718096;
+}
+
+.diet-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.diet-tag {
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.diet-tag.more {
+    background: #cbd5e0;
+    color: #2d3748;
+}
+
+/* Food Detail Styles */
+.food-detail {
+    max-width: 100%;
+}
+
+.back-button {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4a5568;
+    margin-bottom: 20px;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background: #edf2f7;
+    border-color: #cbd5e0;
+}
+
+.detail-header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+
+.detail-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.detail-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.detail-info h1 {
+    font-size: 28px;
+    color: #2d3748;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.detail-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.meta-icon {
+    font-size: 16px;
+}
+
+.health-info {
+    margin-bottom: 20px;
+}
+
+.health-info span {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.health-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.health-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78, #38a169);
+    transition: width 0.3s ease;
+}
+
+.diet-info {
+    margin-bottom: 20px;
+}
+
+.diet-info span {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.detail-section {
+    margin-bottom: 30px;
+}
+
+.detail-section h2 {
+    font-size: 20px;
+    color: #2d3748;
+    margin: 0 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.summary-content {
+    line-height: 1.6;
+    color: #4a5568;
+}
+
+.summary-content p {
+    margin-bottom: 12px;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #4299e1;
+}
+
+.ingredient-amount {
+    font-weight: 600;
+    color: #2d3748;
+    min-width: 60px;
+}
+
+.ingredient-name {
+    color: #4a5568;
+}
+
+.instructions-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+
+.instruction-step {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: #f7fafc;
+    border-radius: 8px;
+    position: relative;
+}
+
+.step-number {
+    background: #4299e1;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.step-text {
+    color: #4a5568;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #48bb78;
+}
+
+.nutrient-name {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.nutrient-amount {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .food-container {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .detail-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .ingredients-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+} 
