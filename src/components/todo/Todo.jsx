@@ -2,6 +2,7 @@ import { useState } from "react"
 import List from "./List"
 import Form from "./Form"
 import Filter from "./Filter"
+import "./todo.css"
 
 function Todo() {
     const [todos, setTodos] = useState([

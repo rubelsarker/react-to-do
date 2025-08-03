@@ -7,6 +7,7 @@ function Item({ todo, onToggle, onDelete }) {
                     onClick={() => onToggle(todo.id)}
                 >
                     {todo.completed ? "✅" : "⭕"}
+                    
                 </span>
                 <span className="task-text">{todo.text}</span>
             </div>
